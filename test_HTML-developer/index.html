@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Steinpilz Screening</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="header__container">
+    <a href="#default" class="header__logo">loremipsum.<span>net</span></a>
+   <div class="header__nav__checkbox">
+     
+      <input type="checkbox" id="nav-menu" class="nav-menu">
+       <label for="nav-menu"></label>
+    
+    <div class="header__nav">
+      <ul>
+        <li><a class="header__nav__link active" href="/business">Бизнес</a></li>
+        <li><a class="header__nav__link" href="/about">О нас</a></li>
+        <li><a class="header__nav__link" href="/pricelist">Цены</a></li>
+        <li><a class="header__nav__link" href="#order">Оформить заказ</a></li>
+      </ul>
+     </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel-top">
+    <div class="content">
+      <div class="panel-top__container">
+        <h1><span>Lorem ipsum</span> dolor sit amet <br />consectetur <span>adipiscing</span>
+        </h1>
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus!
+        </p>
+        <ul>
+          <li>Totam rem aperiam eaque ipsa</li>
+          <li>Totam rem aperiam eaque ipsa</li>
+          <li>Totam rem aperiam eaque ipsa</li>
+        </ul>
+        <div class="panel-top__btn__container">
+          <a href="/" class="panel-top__btn panel-top__btn__blue">Заказать</a>
+          <a href="/" class="panel-top__btn panel-top__btn__white">Подробнее</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="panel-order" id="order">
+    <div class="content">
+      <div class="panel-order__container">
+        <h2>Оформление <span>Заказа</span>
+        </h2>
+        <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!
+        </p>
+        <div class="panel-order__scheme">
+          <!--<img src="scheme-desk.png" alt="Scheme">-->
+          <div class="panel-order__scheme__item">
+            <img src="images/icon-search.png" alt="Scheme img">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="panel-order__scheme__item">
+            <img src="images/icon-percent.png" alt="Scheme img">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="panel-order__scheme__item">
+            <img src="images/icon-file.png" alt="Scheme img">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="panel-order__scheme__item">
+            <img src="images/icon-message.png" alt="Scheme img">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+          <div class="panel-order__scheme__item">
+            <img src="images/icon-money.png" alt="Scheme img">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      
+      <div>
+        <form id="contact-form">
+          <div class="form__container">
+            <div class="custom-select">
+          <select id="type"  placeholder="Выберите тип системы">
+            <option value="type-1">Выберите тип системы</option>
+            <option value="type-2">Nemo enim ipsam</option>
+            <option value="type-3">Et harum quidem</option>
+            <option value="type-4">Temporibus autem</option>
+            <option value="type-5">Itaque earum rerum</option>
+            <option value="type-6">Sed ut perspiciatis</option>
+            <option value="type-7">Nemo enim ipsam</option>
+            <option value="type-8">Itaque earum rerum</option>
+            <option value="type-9">Sed ut perspiciatis</option>
+            <option value="type-10">Nemo enim ipsam</option>
+          </select>
+          </div>
+      
+    
+          <input type="email" placeholder="Ваш e-mail" name="email">
+          <input type="text" placeholder="Ваше имя" name="name">
+          <div class="range">
+            <p><label for="range">Sed ut perspiciatis, unde omnis iste natus</label></p>
+            <input type="range" id="range" value="75" min="1" max="100" oninput="this.nextElementSibling.value = this.value" name="range">
+            <output>75</output>
+          </div>
+          <div class="form__upload">
+          <label for="file-upload">Прикрепить файл</label>
+          <input type="file" id="file-upload" name="file-upload">
+          </div>
+       
+          <input type="submit" value="Отправить">
+        </form>
+       </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__container">
+    <p  class="footer__copyright">
+      © 2018 «LoremIpsum.net» Все права защищены.</p>
+    <div class="footer__payment__container">
+      <ul>
+        <li>|</li>
+        <li><img src="images/icon-qiwi.svg">Qiwi wallet</li>
+        <li><img src="images/icon-yandex.svg">Yandex Money</li>
+        <li><img src="images/icon-web.svg">Web Money</li>
+        <li>|</li>
+      </ul>
+    </div>
+    <div class="footer__contact__container">
+      <ul >
+        <li><a  href="mailto:info@ipsum228.com"><img src="images/icon-mail.svg">info@ipsum228.com</a></li>
+        <li><a  href="/about"><img src="images/icon-vk.svg">Мы вконтакте</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="components/select/select.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+//Normalize
+* {
+  font-family: Lato, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+//Breakpoins
+$breakpoint-m: 1200px;
+$breakpoint-s: 767px;
+
+//Colors
+$color-1: #fff;
+$color-2: #000;
+$color-3: #43ABF0;
+$color-4: #2A2B30;
+$color-5: #3E9CDC;
+
+//Mixins
+@mixin btn {
+
+  padding: 15px 10px;
+
+  font-size: 13px;
+  line-height: 16px;
+
+  border-radius: 4px;
+
+  text-align: center;
+  text-decoration: none;
+  color: $color-1;
+  text-transform: uppercase;
+
+}
+
+@mixin btn-blue {
+  @include btn;
+  background: $color-5;
+  border: 1px solid $color-1;
+
+  &:hover {
+    background: $color-1;
+    color: $color-4;
+    border: 1px solid #6F6D7B;
+  }
+}
+
+@mixin btn-white {
+  @include btn;
+  background: $color-1;
+  color: $color-4;
+  border: 1px solid #6F6D7B;
+
+  &:hover {
+    color: $color-1;
+    background: $color-5;
+    border: 1px solid $color-1;
+  }
+}

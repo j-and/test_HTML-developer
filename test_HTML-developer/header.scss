@@ -1,0 +1,150 @@
+@import 'common.scss';
+
+.header {
+  overflow: hidden;
+  background: rgba(16, 16, 30, 0.9);
+  height: 100px;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__container {
+    padding: 32px 0;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media all and (max-width:$breakpoint-m) {
+      margin: 0 32px;
+    }
+
+    @media all and (max-width:$breakpoint-s) {
+      margin: 0 16px;
+    }
+  }
+
+  &__logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-1;
+
+    span {
+      color: $color-3;
+    }
+  }
+
+  &__nav {
+    @media all and (max-width:$breakpoint-s) {
+      opacity: 0;
+    }
+
+    width: 435px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+      @media all and (max-width: $breakpoint-s) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        top: 94px;
+        background: rgb(16, 16, 30);
+        padding: 40px 0 16px;
+
+        li {
+          padding: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    &__checkbox {
+
+      label {
+        position: absolute;
+        z-index: 1000;
+        right: 40px;
+        top: 40px;
+        text-align: right;
+
+        @media all and (min-width:$breakpoint-s) {
+          display: none;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          background: url("images/icon-hamb.svg") no-repeat;
+          width: 16px;
+          height: 16px;
+          background-size: cover;
+
+        }
+      }
+
+      input[type="checkbox"] {
+
+        z-index: 1000;
+        position: fixed;
+        right: 32px;
+        top: 32px;
+        opacity: 0;
+
+        @media all and (min-width:$breakpoint-s) {
+          display: none;
+        }
+
+        &:checked {
+          &~label {
+            &:before {
+              background: url("images/icon-close.svg") no-repeat;
+              background-size: cover;
+            }
+          }
+
+          &~.header__nav {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__link {
+      font-family: Lato, sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: $color-1;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover,
+      &:active {
+        color: $color-3;
+      }
+    }
+  }
+}
+
+// #nav-menu:not(:checked) ~ .header__nav {
+//   opacity: 0;
+// }
+
+#nav-menu:checked~.header__nav {
+  opacity: 1;
+  ul{
+    position: fixed;
+  }
+}
